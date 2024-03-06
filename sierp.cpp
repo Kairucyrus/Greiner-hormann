@@ -24,7 +24,7 @@ void divide_triangle(GLfloat* a, GLfloat* b, GLfloat* c, int m)
 	int j;
 	if (m > 0)
 	{
-		for (j = 0; j < 2; j++) v0[j] = (a[j] + b[j]) / 2;
+		for (j = 0; j < 2; j++) v0[j] = (a[j] + b[j]) / 2; //for every edge, find the midpoint
 		for (j = 0; j < 2; j++) v1[j] = (a[j] + c[j]) / 2;
 		for (j = 0; j < 2; j++) v2[j] = (b[j] + c[j]) / 2;
 		divide_triangle(a, v0, v1, m - 1);
